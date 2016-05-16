@@ -1,5 +1,3 @@
-<meta charset="utf-8">
-
 <ol class="breadcrumb">
     <li><a href="admin">Admin</a></li>
     <li class="active">Hãng sản xuất</li>
