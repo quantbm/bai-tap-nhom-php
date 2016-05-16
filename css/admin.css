@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-image: url('../img/spark-bg.png');
+    background-repeat: repeat;
+    background-size: 300px 200px;
+    background-attachment: fixed;
+}
+
+.container {
+    padding-top: 40px; max-width: 1024px;
+}
+
+.btn-white {
+    color: #69AED1;
+    background-color: #fff;
+    border: 0;
+    font-size: 16px;
+}
+
+.btn-white:hover {
+    background-color: #F0F7FB;
+    color: #69AED1;
+}
+
+.btn-blue {
+    color: #fff;
+    background-color: #69AED1;
+    border: 0;
+    font-size: 16px;
+}
+
+.btn-blue:hover, .btn-blue:active, .btn-blue:focus {
+    background-color: #F0F7FB;
+    background-color: #5E98B5;
+    color: #fff;
+}
+
+.top-bar {
+    height: 10px;
+    background: #69AED1;
+}
+
+.navbar-top {
+    border: 2px solid #C8D5DB;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.navbar-top li a {
+    color: #82888E;
+    font-size: 17px;
+}
+.navbar-top li a:hover {
+    background-color: transparent;
+    color: #525151;
+}
+
+.panel-rim > .panel-heading {
+    background: #69AED1;
+    color: #fff;
+    border-radius: 0;
+    font-size: 22px;
+    padding: 15px 40px 15px 40px;
+    position: relative;
+}
+
+.panel-rim > .panel-body {
+    background: #F7FAFB;
+    border: 2px solid #C8D5DB;
+}
+
+.go-back {
+    position: absolute;
+    left: 8px;
+    color: #fff;
+}
+
+.go-back:hover {
+    color: #C8D5DB;
+}
