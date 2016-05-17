@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">
-                        Close
+                        Không
                     </button>
                     <a href="admin?phone=delete&id=<?= $phone->id ?>" class="btn btn-danger">
                         Xóa
