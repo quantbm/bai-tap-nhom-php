@@ -1,8 +1,12 @@
 <?php
 
-class Order
+class Order extends Model
 {
 	public $id;
 
-	public $user_id;
+	public $name;
+
+	public $address;
+
+	public $phone_number;
 }

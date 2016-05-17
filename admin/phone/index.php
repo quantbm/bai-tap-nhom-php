@@ -28,7 +28,11 @@
                         <td><?= $phone->category()->name ?></td>
                         <td><?= $phone->price ?></td>
                         <td>còn hàng</td>
-                        <td><span class="glyphicon glyphicon-edit"></span></td>
+                        <td>
+                            <a href="admin?phone=update&id=<?= $phone->id ?>">
+                                <span class="glyphicon glyphicon-edit"></span>
+                            </a>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

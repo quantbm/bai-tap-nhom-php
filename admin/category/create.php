@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     Category::insert($name);
 
-    header('Location: admin/index?category');
+    header('Location: admin?category');
 }
 
  ?>
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <div class="panel panel-rim">
     <div class="panel-heading">
-        <a href="admin?phone" class="go-back">
+        <a href="admin?category" class="go-back">
             <span class="glyphicon glyphicon-arrow-left"></span>
         </a>
         Thêm hãng sản xuất

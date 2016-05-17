@@ -25,7 +25,11 @@
                         <td><?= $category->id ?></td>
                         <td><?= $category->name ?></td>
                         <td><?= $category->amount() ?></td>
-                        <td><span class="glyphicon glyphicon-edit"></span></td>
+                        <td>
+                            <a href="admin?category=update&id=<?= $category->id ?>">
+                                <span class="glyphicon glyphicon-edit"></span>
+                            </a>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
