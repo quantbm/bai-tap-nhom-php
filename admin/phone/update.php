@@ -7,7 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $phone->category_id = $_POST['category_id'];
     $phone->name = $_POST['name'];
     $phone->price = $_POST['price'];
-    $phone->image = '';
     $phone->screen = $_POST['screen'];
     $phone->after_camera = $_POST['after_camera'];
     $phone->before_camera = $_POST['before_camera'];
@@ -16,9 +15,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $phone->memory = $_POST['memory'];
     $phone->battery = $_POST['battery'];
 
-    Phone::update(
-        $phone
-    );
+    if ($_FILES['image']['size'] > 0) {
+        $mine = explode('/', $_FILES["image"]['type'])[1];
+
+        $file_name = $phone->name . '.' . $mine;
+        $target_file = '../img/' . $file_name;
+        move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+
+        $phone->image = $file_name;
+    }
+
+    Phone::update($phone);
 
     header('Location: admin?phone');
 }
@@ -68,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 
     <div class="panel-body">
-        <form action="" method="post" class="form-horizontal">
+        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
 
             <?php include('form.php') ?>
 

@@ -4,15 +4,6 @@ $phone = new Phone();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    if ($_FILES['image']['size'] > 0) {
-        $mine = explode('/', $_FILES["image"]['type'])[1];
-        $file_name = time() . '.' . $mine;
-        $target_file = '../img/' . $file_name;
-        move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
-
-        $phone->image = $file_name;
-    }
-
     $phone->category_id = $_POST['category_id'];
     $phone->name = $_POST['name'];
     $phone->price = $_POST['price'];
@@ -24,9 +15,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $phone->memory = $_POST['memory'];
     $phone->battery = $_POST['battery'];
 
-    Phone::insert(
-        $phone
-    );
+    if ($_FILES['image']['size'] > 0) {
+        $mine = explode('/', $_FILES["image"]['type'])[1];
+
+        $file_name = $phone->name . '.' . $mine;
+        $target_file = '../img/' . $file_name;
+        move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+
+        $phone->image = $file_name;
+    }
+
+    Phone::insert($phone);
 
     header('Location: admin?phone');
 }

@@ -6,7 +6,7 @@ class Database
 
     public $connection;
 
-    public function __construct()
+    private function __construct()
     {
         try {
             $this->connect();
@@ -17,6 +17,16 @@ class Database
     }
 
     public function __clone() {}
+
+    public function __sleep()
+    {
+        return array('mysql:host=localhost;dbname=shop;charset=utf8', 'root', '');
+    }
+
+    public function __wakeup()
+    {
+        $this->connect();
+    }
 
     public static function getInstance()
     {

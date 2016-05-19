@@ -1,0 +1,107 @@
+/*@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);*/
+/*@import url(https://fonts.googleapis.com/css?family=Pacifico);*/
+html{
+	position: relative;
+	min-height: 100%;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+.bg-img{
+    background-image: url("../img/1.jpg");
+    width: 100%;
+    height: 100vh;
+	margin-bottom:60px;
+}
+.navbar {
+    background-color: #049589;
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+.navbar li a {
+    color: white;
+    font-size: 18px;
+}
+
+.navbar li a:hover {
+    background-color: #036B62;
+}
+
+.navbar-top .navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    color: white;
+}
+
+.navbar-top .icon-bar {
+    background-color: white;
+}
+
+.pop {
+    height: .25em;
+    background-image: linear-gradient(to right, #c69 0%, #c69 8.33333%, #b37399 8.33333%, #b37399 16.66667%, #998099 16.66667%, #998099 25%, #699 25%, #699 33.33333%, #d2e1dd 33.33333%, #d2e1dd 41.66667%, #fff 41.66667%, #fff 50%, #f2ece4 50%, #f2ece4 58.33333%, #e1d7d2 58.33333%, #e1d7d2 66.66667%, #dadbdf 66.66667%, #dadbdf 75%, #808c99 75%, #808c99 83.33333%, #6b717f 83.33333%, #6b717f 91.66667%, #036 91.66667%, #036 100%);
+}
+.caption{
+	text-align:center;
+}
+.chon{
+	margin-top:5px;
+	padding:5px;
+}
+.chon a{
+	padding:0px 5px;
+	color:#08f;
+	text-decoration:none;
+}
+.chon a:hover{
+	color:#FF9B00;
+}
+.footer{
+	background-color:#333;
+	color:#fff;
+	padding:20px;
+	position: absolute;
+	bottom: 0;
+	width:100%;
+}
+.footer a{
+	padding: 10px 10px 10px 0px;
+	color:#fff;
+}
+.footer p{
+	color:#ABA9A9;
+}
+ul.nav-footer{
+	list-style-type:none;
+	-webkit-padding-start: 0px;
+}
+.nav-footer li{
+	display:inline;
+}
+.well{
+	margin-top:20px;
+	text-align:center;
+	background-color:#4B6E84;
+	color:#fff;
+}
+.form-horizontal h3{
+	font-weight:bold;
+}
+hr{
+	border:2px solid #2876A5;
+}
+.name-active{
+	color:red;
+	font-weight:bold;
+	font-size:20px;
+}
+.name-product{
+	font-size:24px;
+	font-weight:bold;
+	padding-left:4%;
+}
+.thumbnail{
+	background-color: #F9F6F9;
+}

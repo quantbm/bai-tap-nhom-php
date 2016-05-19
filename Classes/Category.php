@@ -46,4 +46,13 @@ class Category extends Model
 
 		return $amount['number'];
 	}
+
+	public function phones()
+	{
+		return $this->mysql->query(
+			"select * from phone where category_id = $this->id",
+			PDO::FETCH_CLASS,
+			'Phone'
+		);
+	}
 }
